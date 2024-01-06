@@ -1,27 +1,55 @@
-# Podcast Pages
+# Latex Jekyll
+![Alt text](./LatexJekyll.png?raw=true "LatexJekyll website")
+## Try it out
+[Try it here](https://unruffled-ardinghelli-55d901.netlify.app)
 
-Podcast using GitHub Pages and [Jekyll](https://jekyllrb.com/).
+## Getting started from scratch
+1. Clone  
+```git clone https://github.com/Hammie217/LatexJekyll.git```  
+2. Change directory  
+```cd LatexJekyll```  
+3. Updating bundle to resolve dependecy errors
+```bundle update```
+> Before running `bundle update` command make sure your system meets the [Jekyll Installation Requirements](https://jekyllrb.com/docs/installation/).
+4. Start Jekyll Server  
+```jekyll serve```  
+5. Connect to localhost  
 
-## Getting Started
+## What is there?
 
-### Set Up
+### Title settings
 
-1. Fork this project, or click "Use this template" to copy this into your own GitHub repo.
-1. Fill out details in `./_config.yml`
-1. Change the categories under `./podcast.rss` (See [iTunes help page for more info](https://help.apple.com/itc/podcasts_connect/#/itc9267a2f12))
-    ```
-    <itunes:category text="Business">
-        <itunes:category text="Careers" />
-    </itunes:category>
-    ```
-1. Upload your first podcast
-1. Publish using GitHub pages
-1. Submit rss feed link found at `<your-url.github.io>/podcast.rss` to podcast providers (ie. iTunes, Spotify, etc.)
+ - title - Set the main page title
+ - author -  Set the authors name on the title page. Removed if none defined.
+ - date - Set the front page date. Removed if none defined.
+ - abstract - Set the text for the abstract. Removed if none defined.
 
-### For each new podcast
 
-1. Upload the `.mp3` file under `./assets/audio/`
-1. Create a new `.md` file containing your podcast details under `./_posts/`
-1. Fill out details in the template provided
-1. Commit and push
+### Sections
 
+ - Section - Sets font styling of section. Requires manual numbering. `<p  class="Section">1 &ensp; Introduction</p>`
+ - Sub Section - Sets font styling of subsection. Requires manual numbering. `<p  class="SubSection">1.2 &ensp; Text Styles</p>`
+
+### Body settings
+
+ - BodyText - Sets paragraph settings for single column. `<p  class="BodyText">`
+ - BodyText2Col  - Sets paragraph settings for double colum. `<p  class="BodyText2Col">`
+ - BodyText3Col  - Sets paragraph settings for triple column. `<p  class="BodyText3Col">`
+ - Justified - Justifies text to take 100% of the width. `<p  class="Justified">`
+
+### Font sizes
+
+ - tiny
+ - scriptsize
+ - footnotesize
+ - small
+ - normalsize
+ - large
+ - Large
+ - LARGE
+ - huge
+ - HUGE
+
+ ### Maths
+
+ Maths is delivered using mathJax. An inline latex equation can be done with "\\( ... \\)" or on a new line using "\\[ ... \\]".
